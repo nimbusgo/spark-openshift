@@ -1,0 +1,12 @@
+{
+    "display_name": "Spark 2.0.0 (Scala 2.12.1)",
+    "language_info": { "name": "scala" },
+    "argv": [
+        "/opt/toree/bin/run.sh",
+        "--profile",
+        "{connection_file}",
+        "--ip",
+        "0.0.0.0"
+    ],
+    "codemirror_mode": "scala"
+}

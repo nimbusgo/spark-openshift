@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: spark-app-ui
+spec:
+  ports:
+    - port: 4040
+      targetPort: 4040
+  selector:
+    component: notebook

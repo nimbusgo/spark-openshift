@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: notebook-service
+spec:
+  ports:
+    - port: 8888
+      targetPort: 8888
+  selector:
+    component: notebook

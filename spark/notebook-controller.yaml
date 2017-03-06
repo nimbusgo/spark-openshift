@@ -1,0 +1,25 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: notebook-controller
+spec:
+  replicas: 1
+  selector:
+    component: notebook
+  template:
+    metadata:
+      labels:
+        component: notebook
+    spec:
+      containers:
+        - name: notebook
+          image: nimbusgo/sparknb
+          command: ["/scripts/run_notebook.sh"]
+          ports:
+            - containerPort: 8888
+            - containerPort: 4040
+          resources:
+            requests:
+              cpu: 100m
+          securityContext:
+            privileged: true

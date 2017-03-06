@@ -39,5 +39,9 @@ ENV PYTHONPATH=$PYTHONPATH:$SPARK_HOME/python
 ADD .ipython root/.ipython
 
 ADD scripts /scripts
-RUN chmod +x /scripts/*
+RUN chmod +x /scripts/* \
+    && mv /scripts/launch.sh $SPARK_HOME/bin/ \
+    && chmod +x $SPARK_HOME/bin/launch.sh
+
+CMD ["usr/local/spark/bin/launch.sh"]
 

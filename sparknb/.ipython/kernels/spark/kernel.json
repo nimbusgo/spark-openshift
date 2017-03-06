@@ -6,7 +6,8 @@
         "--profile",
         "{connection_file}",
         "--ip",
-        "0.0.0.0"
+        "0.0.0.0",
+        "--nosparkcontext"
     ],
     "codemirror_mode": "scala"
 }
